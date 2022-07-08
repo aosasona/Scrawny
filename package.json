@@ -1,7 +1,7 @@
 {
   "name": "scrawny",
   "description": "A simple, lightweight, and easy to use request logger for Node.js",
-  "version": "0.1.15",
+  "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
   "scripts": {
