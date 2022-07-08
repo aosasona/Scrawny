@@ -1,8 +1,8 @@
 {
   "name": "scrawny",
   "description": "A simple, lightweight, and easy to use request logger for Node.js",
-  "version": "0.1.0",
-  "main": "./dist/index.js",
+  "version": "0.1.15",
+  "main": "index.js",
   "license": "MIT",
   "scripts": {
     "build": "tsc -p ."
@@ -11,7 +11,7 @@
     "typescript": "^4.7.4"
   },
   "dependencies": {
-    "chalk": "^5.0.1"
+    "chalk": "^2.0.1"
   },
   "repository": "aosasona/scrawny",
   "engines": {
