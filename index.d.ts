@@ -1,17 +1,11 @@
-import type { Request, Response, NextFunction } from "express";
-
+import { Request, Response, NextFunction } from "express";
 interface ScrawnyOptions {
-  allowed?: string[];
-  log?: boolean;
-  format?: string;
+    allowed?: string[];
+    log?: boolean;
+    format?: string;
 }
-
-type Scrawny = (
-  options?: ScrawnyOptions
-) => (req: Request, res: Response, next: NextFunction) => void;
-
-type ScrawnyAllowed = string;
-
-type ScrawnyActiveValue = boolean;
-
-type ScrawnyFormat = string;
+/**
+ * @description: Scrawny middleware
+ */
+declare const scrawny: (options?: ScrawnyOptions) => (req: Request, res: Response, next: NextFunction) => Promise<void>;
+export default scrawny;

@@ -7,20 +7,20 @@ An open-source, light-weight, simple request logger for Node.js.
 You can install Scrawny by running any of the following command:
 
 ```bash
-npm install Scrawny
+npm install scrawny
 ```
 
 OR
 
 ```bash
-yarn add Scrawny
+yarn add scrawny
 ```
 
 ## Usage
 
 Using Scrawny is very easy and here's how to do it. It also has built-in typescript declarations.
 
-### Typescript
+### Typescript and ES6
 
 ```typescript
 import express, { Express } from "express";
@@ -43,7 +43,7 @@ app.listen(3000, () => {
 
 ```js
 const express = require("express");
-const scrawny = require("Scrawny");
+const { default: scrawny } = require("Scrawny");
 
 const app = express();
 
@@ -64,6 +64,7 @@ app.listen(3000, () => {
 
 - **allowed**: an array of data you want to log.
 - **format**: a string containing your required format of the data you want to log. While using this option, you don't need to use the `allowed` option.
+- **dateFormat**: type of date format you want to use (default: UTC, others: ISO, "Locale").
 - **log**: a boolean value to enable/disable the logger; default is `false` so it doesn't run in production.
   > You can enable this only in development mode by passing `log: process.env.NODE_ENV !== "production",` to the options.
 
@@ -118,3 +119,6 @@ allowed: [
 > - [QUERY]
 >
 > It is also case-insensitive.
+
+Found bugs? Let me know!
+You can also fork this project on [GitHub](https://github.com/aosasona/scrawny) and tinker with it.
